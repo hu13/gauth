@@ -2,8 +2,8 @@ name: goreleaser
 
 on:
   push:
-    # branches:
-      # - main
+    branches:
+      - main
   pull_request:
     types: [opened, reopened, synchronize]
 
@@ -24,7 +24,7 @@ jobs:
         with:
           go-version: 1.17
 
-      - name: Run GoReleaser release
+      - name: Run GoReleaser release (SKIP publish)
         uses: goreleaser/goreleaser-action@v2
         if: startsWith(github.ref, 'refs/tags/') != true
         with:
