@@ -25,3 +25,9 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
+brews:
+  - name: gauth
+    homepage: https://github.com/hu13/homebrew-gauth 
+    tap:
+      owner: hu13
+      name: homebrew-gauth
